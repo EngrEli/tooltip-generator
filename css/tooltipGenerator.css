@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 100%;
+  height: 100vh;
+}
+
+.center {
+  margin: 100px auto;
+  width: 500px;
+  text-align: center;
+}
+
+.tooltip__container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip__text-container {
+  display: none;
+  position: absolute;
+  text-align: left;
+  background-color: #FFFFFF;
+  color: #667084;
+  white-space: nowrap;
+  border: 1px solid #DADADA;
+  font-size: 12px;
+  padding: 16px;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+  width: 350px;
+  z-index: 99;
+}
+
+.tooltip__text-container::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #FFFFFF;
+  position: absolute;
+  border: 1px solid #DADADA;
+}
+
+.tooltip__text-title {
+  font-weight: 700;
+}
+
+/* Bottom tooltip placement */
+.tooltip__container--bottom-placement .tooltip__text-container {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 120%);
+}
+
+.tooltip__container--bottom-placement .tooltip__text-container::before {
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 5px) rotate(45deg);
+  border-right: 0;
+  border-bottom: 0;
+}
+
+/* Top tooltip placement */
+.tooltip__container--top-placement .tooltip__text-container {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -120%);
+}
+
+.tooltip__container--top-placement .tooltip__text-container::before {
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 6px) rotate(45deg);
+  border-left: 0;
+  border-top: 0;
+}
+
+/* Right tooltip placement */
+.tooltip__container--right-placement .tooltip__text-container {
+  right: 0;
+  top: 50%;
+  transform: translate(103%, -50%);
+}
+
+.tooltip__container--right-placement .tooltip__text-container::before {
+  left: 0%;
+  top: 50%;
+  transform: translate(-6px, -50%) rotate(45deg);
+  border-top: 0;
+  border-right: 0;
+}
+
+/* Left tooltip placement */
+.tooltip__container--left-placement .tooltip__text-container {
+  left: 0;
+  top: 50%;
+  transform: translate(-103%, -50%);
+}
+
+.tooltip__container--left-placement .tooltip__text-container::before {
+  right: 0%;
+  top: 50%;
+  transform: translate(6px, -50%) rotate(45deg);
+  border-bottom: 0;
+  border-left: 0;
+}
+
+/* Active tooltip show */
+.tooltip__container--show .tooltip__text-container {
+  /* opacity: 1; */
+  display: block;
+}
+
+.tooltip__container--show .icon-question-circle {
+  /* color: rgb(91, 181, 255); */
+  color: rgb(91 181 255 / 100%);
+}
+
+.tooltip__element {
+  cursor: pointer;
+}
+
+/* Close button icon */
+.icon-cross1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  font-size: 10px;
+}
