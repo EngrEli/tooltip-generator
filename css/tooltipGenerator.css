@@ -27,11 +27,11 @@ html {
   background-color: #FFFFFF;
   color: #667084;
   white-space: nowrap;
-  border: 1px solid #DADADA;
+  border: 1px solid #D6DAE1;
   font-size: 12px;
   padding: 16px;
   border-radius: 2px;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+  box-shadow: 0 10px 10px rgba(0 0 0 / 10%);
   width: 350px;
   z-index: 99;
 }
@@ -42,11 +42,13 @@ html {
   height: 10px;
   background-color: #FFFFFF;
   position: absolute;
-  border: 1px solid #DADADA;
+  border: 1px solid #D6DAE1;
 }
 
 .tooltip__text-title {
   font-weight: 700;
+  color: #1B1E26;
+  font-size: 14px;
 }
 
 /* Bottom tooltip placement */
@@ -115,9 +117,12 @@ html {
   display: block;
 }
 
+.icon-question-circle {
+  color: #AEB4C6;
+}
+
 .tooltip__container--show .icon-question-circle {
-  /* color: rgb(91, 181, 255); */
-  color: rgb(91 181 255 / 100%);
+  color: #3971FF;
 }
 
 .tooltip__element {
