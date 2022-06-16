@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // 5. style ( default(titleWithClose), textOnlyWithClose, textOnly)
   // 6. title (any text or text with HTML tags, default) not done
   generator('.test', {
-    content: 'test content',
+    content: 'test contentss',
+    placement: 'left',
   });
 });
