@@ -9,11 +9,11 @@ export default function generator(elem, options) {
     const oTooltipText = document.createElement('div');
     oTooltipText.className = 'tooltip__text-container';
 
-    // Create tooltip text container
+    // Create tooltip title
     const oTooltipTextTitle = document.createElement('div');
     oTooltipTextTitle.className = 'tooltip__text-title';
 
-    // Create tooltip text container
+    // Create tooltip text content
     const oTooltipTextContent = document.createElement('div');
     oTooltipTextContent.className = 'tooltip__text-content';
 
@@ -44,20 +44,20 @@ export default function generator(elem, options) {
       item.classList.add('tooltip__element');
     } else if (!options.allowOnAnyElement || options.allowOnAnyElement == null) {
       // DIV tags can be transformed to tooltip
-      console.log(item.tagName);
+      // WARNING: tooltip functionality will be removed if the target is not a
+      //  div element (to avoid element conflicts eg. li tag, a tag, progress tag)
       if (item.tagName !== 'DIV') {
         item.parentNode.classList.remove('tooltip__container');
       } else {
         item.classList.add('icon-question-circle', 'tooltip__element');
         item.innerHTML = '';
       }
-      // item.classList.add('icon-question-circle', 'tooltip__element');
-      // item.innerHTML = '';
     }
 
     /**
      * title - the user can enter a string or a string with HTML element.
      * Initially, the default value will be a standard text.
+     *
      * @returns void
     */
     // title option
@@ -70,6 +70,7 @@ export default function generator(elem, options) {
     /**
      * content - the user can enter a string or a string with HTML element.
      * Initially, the default value will be a standard text.
+     *
      * @returns void
     */
     if (!options.content) {
@@ -81,6 +82,7 @@ export default function generator(elem, options) {
     /**
      * trigger - user can select if he wants a
      * click or a default mouseover/hover to show tooltip text
+     *
      * @returns void
     */
     if (!options.trigger || options.trigger === 'hover') {
@@ -93,17 +95,21 @@ export default function generator(elem, options) {
         this.classList.add('tooltip__container--show');
       });
       oTooltipContainer.addEventListener('mouseout', function() {
-        // If options.style is title with a close button, don't remove the show class
+        // If options.style is title with a close button don't remove the show class
         if (!oTooltipContainer.classList.contains('tooltip__container--with-close-btn')) {
           this.classList.remove('tooltip__container--show');
         }
       });
       document.addEventListener('click', function(evt) {
+        // when X button is clicked, the tooltip will be closed
         if (evt.target.classList.contains('icon-cross1')) {
           oTooltipContainer.classList.remove('tooltip__container--show');
         }
       });
     } else if (options.trigger === 'click') {
+      // If the trigger was set to 'click', the tooltip element needs to be
+      // clicked for the tooltip container to appear.
+      // Clicking the tooltip element closes other tooltips that were previously open.
       oTooltipContainer.addEventListener('click', function() {
         document.querySelectorAll('.tooltip__container').forEach(function(j) {
           j.classList.remove('tooltip__container--show');

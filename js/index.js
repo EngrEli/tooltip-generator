@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // 4. trigger (click, hover - if no value default)
   // 5. style ( default(titleWithClose), textOnlyWithClose, textOnly)
   // 6. title (any text or text with HTML tags, default) not done
-  generator('.test', {
-    content: 'test contentss',
-    placement: 'left',
+  generator('.testung', {
+    style: 'textOnly',
+    trigger: 'click',
   });
 });

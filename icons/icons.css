@@ -10,7 +10,7 @@
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'], [class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -27,13 +27,13 @@
 }
 
 .icon-cross::before {
-  content: "\e901";
+  content: '\e901';
 }
 
 .icon-question-circle::before {
-  content: "\e900";
+  content: '\e900';
 }
 
 .icon-cross1::before {
-  content: "\ea0f";
+  content: '\ea0f';
 }
