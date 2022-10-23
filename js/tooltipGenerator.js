@@ -42,7 +42,7 @@ export default function generator(elem, options) {
     */
     if (options.allowOnAnyElement) {
       item.classList.add('tooltip__element');
-    } else if (!options.allowOnAnyElement || options.allowOnAnyElement == null) {
+    } else if (!options.allowOnAnyElement) {
       // DIV tags can be transformed to tooltip
       // WARNING: tooltip functionality will be removed if the target is not a
       //  div element (to avoid element conflicts eg. li tag, a tag, progress tag)
@@ -60,11 +60,10 @@ export default function generator(elem, options) {
      *
      * @returns void
     */
-    // title option
     if (!options.title) {
       oTooltipTextTitle.innerHTML = 'This is the default tooltip title';
     } else {
-      oTooltipTextTitle.innerHTML = options.title;
+      oTooltipTextTitle.innerText = options.title;
     }
 
     /**
@@ -78,6 +77,15 @@ export default function generator(elem, options) {
     } else {
       oTooltipTextContent.innerHTML = options.content;
     }
+
+    /**
+     * delay - user can add delay when hovering
+     * The main idea is the delay value will be added below the options.trigger === 'hover'
+     * the adding of the class will just have a setTimeOut so that there will be a 
+     * delay when hovering
+     *
+     * @returns void
+    */
 
     /**
      * trigger - user can select if he wants a
@@ -127,12 +135,6 @@ export default function generator(elem, options) {
           oTooltipContainer.classList.remove('tooltip__container--show');
         }
       });
-      // Remove active tooltip when clicking outside a tooltip
-      // document.addEventListener('click', function(evt) {
-      //   if (!evt.target.classList.contains('icon-question-circle')) {
-      //     oTooltipContainer.classList.remove('tooltip__container--show');
-      //   }
-      // })
     }
 
     /**
@@ -176,6 +178,18 @@ export default function generator(elem, options) {
       oTooltipTextTitle.style.display = 'none';
     } else if (options.style === 'textOnly') {
       oTooltipTextTitle.style.display = 'none';
+    }
+
+    /**
+     * className - user can add custom class name to the tooltip container
+     *
+     * @returns void
+    */
+    if (options.className) {
+      // If user entered multiple classes (classes separated with space), below code
+      // splits the classes and each is added directly to the container
+      const aSplitClass = options.className.split(' ');
+      oTooltipContainer.classList.add(...aSplitClass);
     }
   });
 }
