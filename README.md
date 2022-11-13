@@ -35,7 +35,7 @@ Then, before your closing `<body>` tag add:
 
 Set up your HTML markup
 ```
-<div class="your-class">testing</div>
+<div class="your-class">Your Element</div>
 ```
 
 | Syntax | Description |
