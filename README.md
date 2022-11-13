@@ -1,7 +1,7 @@
 # tooltip-generator
 JS package for easy tooltip generation
 
-## Installation
+### Installation
 Download the `tooltip-generator` zip file and unzip it. Distribute the file inside your project
 
 ```
@@ -38,7 +38,7 @@ Set up your HTML markup
 <div class="your-class">Your Element</div>
 ```
 
-## Settings
+### Settings
 
 | Syntax | Description |
 | ----------- | ----------- |
