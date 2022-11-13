@@ -43,5 +43,6 @@ Set up your HTML markup
 Option | Type | Default | Description
 ------ | ---- | ------- | -----------
 allowOnAnyElement | boolean | false | Makes the tooltip available on the targeted element (div element). If the user lets the default setting `(allowOnAnyElement: false)`, the targeted element will be converted into a tooltip icon.
-title | string | `This is the default tooltip title` | Changes the title of the tooltip content. The title ignores HTML tags and is `bold` by default.
+title | string | 'This is the default tooltip title' | Changes the title of the tooltip content. The `title` ignores HTML tags and is `bold` by default.
 content | string | 'This is the default tooltip content' | Changes the body text of the tooltip content. `content` accepts HTML tags.
+placement | string | 'bottom' | Changes the placement of the tooltip content when it is shown. Accepts `top`, `right`, `bottom` and `left`.
