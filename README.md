@@ -42,6 +42,6 @@ Set up your HTML markup
 
 Option | Type | Default | Description
 ------ | ---- | ------- | -----------
-accessibility | boolean | true | Enables tabbing and arrow key navigation.  Unless `autoplay: true`, sets browser focus to current slide (or first of current slide set, if multiple `slidesToShow`) after slide change. For full a11y compliance enable focusOnChange in addition to this.
+allowOnAnyElement | boolean | false | Makes the tooltip available on the targeted element. If the user lets the default setting(allowOnAnyElement: false), the targeted element will be converted into a tooltip icon.
 adaptiveHeight | boolean | false | Adapts slider height to the current slide
 appendArrows | string | $(element) | Change where the navigation arrows are attached (Selector, htmlString, Array, Element, jQuery object)
