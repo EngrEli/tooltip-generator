@@ -38,6 +38,8 @@ Set up your HTML markup
 <div class="your-class">Your Element</div>
 ```
 
+## Settings
+
 | Syntax | Description |
 | ----------- | ----------- |
 | Header | Title |
