@@ -49,3 +49,16 @@ placement | string | 'bottom' | Changes the placement of the tooltip content whe
 trigger | string | 'hover' | Changes the trigger of tooltip. `click` - click on the element to show the tooltip content. `hover` - hover on the element to show the tooltip content.
 style | string | 'titleWithClose' | Changes the style behavior of the tooltip content. `stlye` can be `titleWithClose` - tooltip content with title and a close button, `textOnlyWithClose` - tooltip content with no title and a close button, `textOnly` - tooltip content with just a text content only.
 className | string | n/a | adds a class name to the targeted class' tooltip container. Just separate classes with spaces if you want multiple classes on the container
+
+### Example
+```
+  import generator from './tooltipGenerator.js';
+  
+  generator('.your-class', {
+    title: 'Here's your title',
+    content: 'and here's your content',
+    trigger: 'click,
+    className: 'class1 class1-1',
+    placement: 'top',// You can also change the style of the tooltip content
+  });
+```
