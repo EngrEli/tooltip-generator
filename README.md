@@ -46,3 +46,6 @@ allowOnAnyElement | boolean | false | Makes the tooltip available on the targete
 title | string | 'This is the default tooltip title' | Changes the title of the tooltip content. The `title` ignores HTML tags and is `bold` by default.
 content | string | 'This is the default tooltip content' | Changes the body text of the tooltip content. `content` accepts HTML tags.
 placement | string | 'bottom' | Changes the placement of the tooltip content when it is shown. Accepts `top`, `right`, `bottom` and `left`.
+trigger | string | 'hover' | Changes the trigger of tooltip. `click` - click on the element to show the tooltip content. `hover` - hover on the element to show the tooltip content.
+style | string | 'titleWithClose' | Changes the style behavior of the tooltip content. `stlye` can be `titleWithClose` - tooltip content with title and a close button, `textOnlyWithClose` - tooltip content with no title and a close button, `textOnly` - tooltip content with just a text content only.
+className | string | n/a | adds a class name to the targeted class' tooltip container. Just separate classes with spaces if you want multiple classes on the container
