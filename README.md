@@ -58,7 +58,7 @@ className | string | n/a | adds a class name to the targeted class' tooltip cont
     title: 'Here's your title',
     content: 'and here's your content',
     trigger: 'click,
-    className: 'class1 class1-1',
-    placement: 'top',// You can also change the style of the tooltip content
+    className: 'class1 class2',
+    placement: 'top'
   });
 ```
