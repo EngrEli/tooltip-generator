@@ -21,12 +21,12 @@ yourProject
 |
 ```
 
-Just add a link to the css file in your `<head>`:
+Just add a link of the css file in your `<head>`:
 ```
 <link rel="stylesheet" href="./icons/icons.css">
 <link rel="stylesheet" href="./css/tooltipGenerator.css">
 ```
-  
+
 Then, before your closing `<body>` tag add:
 ```
 <script type="module" src="./js/tooltipGenerator.js"></script>
@@ -51,6 +51,7 @@ style | string | 'titleWithClose' | Changes the style behavior of the tooltip co
 className | string | n/a | adds a class name to the targeted class' tooltip container. Just separate classes with spaces if you want multiple classes on the container
 
 ### Example
+Inside your js configuration file (index.js)
 ```
   import generator from './tooltipGenerator.js';
   
