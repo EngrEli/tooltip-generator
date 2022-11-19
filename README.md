@@ -64,9 +64,9 @@ className | string | n/a | adds a class name to the targeted class' tooltip cont
 ```
 
 ### Browser support
-Tooltip-generatos works on IE8+ in addition to other modern browsers such as Chrome, Firefox, and Safari.
+Tooltip-generator works on IE8+ in addition to other modern browsers such as Chrome, Firefox, and Safari.
 
 ### License
 Copyright (c) 2022 Elizer Lumilay
 
-Free as in Bacon.
+Freeeee
