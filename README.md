@@ -1,4 +1,4 @@
-# tooltip-generator
+# Tooltip-generator
 JS package for easy tooltip generation
 
 ### Installation
@@ -62,3 +62,11 @@ className | string | n/a | adds a class name to the targeted class' tooltip cont
     placement: 'top'
   });
 ```
+
+### Browser support
+Tooltip-generatos works on IE8+ in addition to other modern browsers such as Chrome, Firefox, and Safari.
+
+### License
+Copyright (c) 2022 Elizer Lumilay
+
+Free as in Bacon.
