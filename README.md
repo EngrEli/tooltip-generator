@@ -1,3 +1,5 @@
+![Alt text](relative%20path/to/gifTooltip.gif?raw=true "Title")
+
 # Tooltip-generator
 JS package for easy tooltip generation
 
