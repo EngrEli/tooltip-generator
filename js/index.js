@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import generator from './tooltipGenerator.js';
 
 document.addEventListener('DOMContentLoaded', function() {
